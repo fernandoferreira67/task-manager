@@ -34,27 +34,6 @@
       "description": "Assistir um filme com a família",
       "time": "evening",
       "status": "not_started"
-    },
-    {
-      "id": "6",
-      "title": "Meditar",
-      "description": "Meditar por 10 minutos",
-      "time": "evening",
-      "status": "not_started"
-    },
-    {
-      "id": "6f81b541-2e9d-4af8-9284-e8ebfdc72b63",
-      "title": "Beber Agua",
-      "time": "morning",
-      "description": "I need drink wather",
-      "status": "not_started"
-    },
-    {
-      "id": "43b4d328-9fd3-4539-aa17-5ef116562793",
-      "title": "Reunião",
-      "time": "afternoon",
-      "description": "Reunião Faturex",
-      "status": "not_started"
     }
   ]
 }
