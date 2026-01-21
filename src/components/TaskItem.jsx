@@ -29,7 +29,7 @@ const TaskItem = ({ task, handleCheckboxClick, onDeleteSuccess }) => {
     }
 
     if (task.status === 'in_progress') {
-      return 'bg-brand-process text-brand-process'
+      return 'bg-brand-process bg-opacity-10 text-brand-process'
     }
 
     if (task.status === 'not_started') {
