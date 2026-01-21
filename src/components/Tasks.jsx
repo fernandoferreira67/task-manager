@@ -7,7 +7,7 @@ import {
   MoonIcon,
   SunIcon,
   TrashIcon,
-} from '../assets/icons/index'
+} from '../assets/icons'
 import AddTaskDialog from './AddTaskDialog'
 import Button from './Button'
 import TaskItem from './TaskItem'
@@ -32,16 +32,7 @@ const Tasks = () => {
   const afternoonTasks = tasks.filter((task) => task.time === 'afternoon')
   const eveningTasks = tasks.filter((task) => task.time === 'evening')
 
-  const handleTaskDeleteClick = async (taskId) => {
-    const response = await fetch(`http://localhost:3000/tasks/${taskId}`, {
-      method: 'DELETE',
-    })
-    if (!response.ok) {
-      return toast.error(
-        'Erro ao deletar a tarefa. Por favor, tente novamente.'
-      )
-    }
-
+  const onDeleteTaskSuccess = async (taskId) => {
     const newTasks = tasks.filter((task) => task.id !== taskId)
     setTasks(newTasks)
     toast.success('Tarefa deletada com sucesso!')
@@ -61,12 +52,11 @@ const Tasks = () => {
         return { ...task, status: 'done' }
       }
       if (task.status === 'done') {
-        toast.success('Tarefa reinicada com sucesso!')
+        toast.success('Tarefa reiniciada com sucesso!')
         return { ...task, status: 'not_started' }
       }
       return task
     })
-
     setTasks(newTasks)
   }
 
@@ -80,7 +70,6 @@ const Tasks = () => {
         'Erro ao adicionar a tarefa. Por favor, tente novamente.'
       )
     }
-
     setTasks([...tasks, task])
     toast.success('Tarefa adicionada com sucesso!')
   }
@@ -113,6 +102,7 @@ const Tasks = () => {
           />
         </div>
       </div>
+
       <div className="rounded-xl bg-white p-6">
         <div className="space-y-3">
           <TasksSeparator title="Manhã" icon={<SunIcon />} />
@@ -121,10 +111,11 @@ const Tasks = () => {
               key={task.id}
               task={task}
               handleCheckboxClick={handleTaskCheckboxClick}
-              handleDeleteClick={handleTaskDeleteClick}
+              onDeleteSuccess={onDeleteTaskSuccess}
             />
           ))}
         </div>
+
         <div className="my-6 space-y-3">
           <TasksSeparator title="Tarde" icon={<CloudSunIcon />} />
           {afternoonTasks.map((task) => (
@@ -132,10 +123,11 @@ const Tasks = () => {
               key={task.id}
               task={task}
               handleCheckboxClick={handleTaskCheckboxClick}
-              handleDeleteClick={handleTaskDeleteClick}
+              onDeleteSuccess={onDeleteTaskSuccess}
             />
           ))}
         </div>
+
         <div className="space-y-3">
           <TasksSeparator title="Noite" icon={<MoonIcon />} />
           {eveningTasks.map((task) => (
@@ -143,7 +135,7 @@ const Tasks = () => {
               key={task.id}
               task={task}
               handleCheckboxClick={handleTaskCheckboxClick}
-              handleDeleteClick={handleTaskDeleteClick}
+              onDeleteSuccess={onDeleteTaskSuccess}
             />
           ))}
         </div>
@@ -151,5 +143,4 @@ const Tasks = () => {
     </div>
   )
 }
-
 export default Tasks

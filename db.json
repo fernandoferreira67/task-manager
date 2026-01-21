@@ -15,13 +15,6 @@
       "status": "done"
     },
     {
-      "id": "3",
-      "title": "Treinar",
-      "description": "Treinar para a competição de natação",
-      "time": "afternoon",
-      "status": "in_progress"
-    },
-    {
       "id": "4",
       "title": "Fazer compras",
       "description": "Comprar os ingredientes para o jantar",
