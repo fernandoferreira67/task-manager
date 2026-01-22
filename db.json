@@ -27,13 +27,6 @@
       "description": "Assistir um filme com a família",
       "time": "evening",
       "status": "not_started"
-    },
-    {
-      "id": "bed4e2ee-9326-46b5-bd24-8830b294b21b",
-      "title": "asdsad",
-      "time": "morning",
-      "description": "asdsad",
-      "status": "not_started"
     }
   ]
 }
