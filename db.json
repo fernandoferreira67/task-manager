@@ -13,20 +13,6 @@
       "description": "Ler o livro de matemática",
       "time": "morning",
       "status": "done"
-    },
-    {
-      "id": "4",
-      "title": "Fazer compras",
-      "description": "Comprar os ingredientes para o jantar",
-      "time": "afternoon",
-      "status": "in_progress"
-    },
-    {
-      "id": "5",
-      "title": "Descansar",
-      "description": "Assistir um filme com a família",
-      "time": "evening",
-      "status": "not_started"
     }
   ]
 }
