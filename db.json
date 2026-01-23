@@ -12,7 +12,7 @@
       "title": "asdasdasd",
       "time": "morning",
       "description": "asdsad",
-      "status": "in_progress"
+      "status": "done"
     },
     {
       "id": "467176ce-958c-4b86-8e29-2ed828e7039d",
@@ -34,6 +34,13 @@
       "time": "morning",
       "description": "dwadsasd",
       "status": "in_progress"
+    },
+    {
+      "id": "01328d35-aa78-4280-a5be-83f28ace6fee",
+      "title": "sadsada",
+      "time": "morning",
+      "description": "asdsa",
+      "status": "not_started"
     }
   ]
 }
